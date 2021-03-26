@@ -25,7 +25,7 @@ while ($data = fgets($file)) {
     // Get the site id for the current line and create the file name
     // e.g. site 501 -> ./files/data_501.csv
     $siteID = explode(';', $data)[4];
-    $siteFile = './files/data_' . $siteID . '.csv';
+    $siteFile = './files/csv/data_' . $siteID . '.csv';
     
     // If the file doesn't exist for the current site, make it
     if (!file_exists($siteFile)) {

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Timestamp (ts) attribute must be an integer consisting of 0 to 10 digits, with
+         the max value being 2147483647 (when the Unix Timestamp will no longer fit into 32 bits) -->
+    <xs:attribute name="ts">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:pattern value="\d{0,10}"/>
+                <xs:maxInclusive value="2147483647"/>
+                <xs:minInclusive value="0"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- NOx value must be a decimal allowing for positive or negative values -->
+    <xs:attribute name="nox">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:pattern value="-?\d+\.\d+"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- NO value must be a decimal allowing for positive or negative values -->
+    <xs:attribute name="no">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:pattern value="-?\d+\.\d+"/>
+        </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- NO2 value must be a decimal allowing for positive or negative values -->
+    <xs:attribute name="no2">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:pattern value="-?\d+\.\d+"/>
+        </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- Station ID must be a 3 digit integer between 100 and 999 -->
+    <xs:attribute name="id">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:pattern value="\d{3}"/>
+                <xs:maxInclusive value="999"/>
+                <xs:minInclusive value="100"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- Name must be a string between 0 and 128 characters -->
+    <xs:attribute name="name">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value=".{0,128}"/>
+                <xs:maxLength value="128"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- Geocode must be a string between 0 and 128 characters -->
+    <xs:attribute name="geocode">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value=".+"/>
+                <xs:maxLength value="128"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- Record element must have a timestamp and NOx. NO and NO2 are allowed, but optional -->
+    <xs:element name="rec">
+        <xs:complexType>
+            <xs:attribute ref="ts" use="required"/>
+            <xs:attribute ref="nox" use="required"/>
+            <xs:attribute ref="no"/>
+            <xs:attribute ref="no2"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Station element must have ID, Name, and GeoCode attributes, and can have any number of rec child elements -->
+    <xs:element name="station">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rec" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute ref="id" use="required"/>
+            <xs:attribute ref="name" use="required"/>
+            <xs:attribute ref="geocode" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

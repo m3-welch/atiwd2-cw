@@ -1,6 +1,7 @@
 #! /bin/bash
 
-cd ./files/
-
+cd ./files/csv
 rm -r *.csv
+
+cd ../xml
 rm -r *.xml
