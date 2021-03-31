@@ -1,3 +1,5 @@
+<?php include_once('googleMapsKey.php');?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +9,48 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="top-menu-bar">
+            <div class="top-menu-bar-title">
+                <span class="title">ATIWD2 - Task 4</span>
+            </div>
+
+            <div class="top-menu-bar-timeline">
+                <div class="navigation-arrow left" onclick="previousMonth()"><i class="mi-chevron-left"></i></div>
+                <div class="month selected" id="month-1" onclick="selectMonth(1)">Jan</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-2" onclick="selectMonth(2)">Feb</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-3" onclick="selectMonth(3)">Mar</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-4" onclick="selectMonth(4)">Apr</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-5" onclick="selectMonth(5)">May</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-6" onclick="selectMonth(6)">Jun</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-7" onclick="selectMonth(7)">Jul</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-8" onclick="selectMonth(8)">Aug</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-9" onclick="selectMonth(9)">Sep</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-10" onclick="selectMonth(10)">Oct</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-11" onclick="selectMonth(11)">Nov</div>
+                <i class="mi-remove"></i>
+                <div class="month" id="month-12" onclick="selectMonth(12)">Dec</div>
+                <div class="navigation-arrow right" onclick="nextMonth()"><i class="mi-chevron-right"></i></div>
+            </div>
+        </div>
+        <div class="loading" id="msg">
+            Loading data and maps...
+        </div>
+        <div style="height:100%; width:100%;">
+            <div id="map" class="invisible"></div>
+        </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $g_maps_api_key;?>&callback=initMap&libraries=&v=weekly" async></script>
         <script type="text/javascript">
             window.addEventListener("load", () => getData())
             
@@ -97,64 +141,27 @@
                 next_month.classList.add('selected')
             }
 
-            function getData() {
-                jsonData = $.ajax({
+            async function getData() {
+                $.ajax({
                     url: "getData.php",
                     type: "GET",
                     dataType: "json",
-                    async: false,
+                    async: true,
                     processData: false,
                     contentType: false,
                     cache: false,
-                }).responseText
+                    success: (json) => {
+                        var jsonData = json
 
-                jsonData = JSON.parse(jsonData)
-
-                var map = document.getElementById('map')
-                map.classList.remove('invisible')
+                        var map = document.getElementById('map')
+                        map.classList.remove('invisible')
+                    },
+                    error: () => {
+                        var msg = document.getElementById('msg')
+                        msg.innerText = "Something went wrong..."
+                    }
+                })
             }
         </script>
-    </head>
-    <body>
-        <div class="top-menu-bar">
-            <div class="top-menu-bar-title">
-                <span class="title">ATIWD2 - Task 4</span>
-            </div>
-
-            <div class="top-menu-bar-timeline">
-                <div class="navigation-arrow left" onclick="previousMonth()"><i class="mi-chevron-left"></i></div>
-                <div class="month selected" id="month-1" onclick="selectMonth(1)">Jan</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-2" onclick="selectMonth(2)">Feb</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-3" onclick="selectMonth(3)">Mar</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-4" onclick="selectMonth(4)">Apr</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-5" onclick="selectMonth(5)">May</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-6" onclick="selectMonth(6)">Jun</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-7" onclick="selectMonth(7)">Jul</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-8" onclick="selectMonth(8)">Aug</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-9" onclick="selectMonth(9)">Sep</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-10" onclick="selectMonth(10)">Oct</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-11" onclick="selectMonth(11)">Nov</div>
-                <i class="mi-remove"></i>
-                <div class="month" id="month-12" onclick="selectMonth(12)">Dec</div>
-                <div class="navigation-arrow right" onclick="nextMonth()"><i class="mi-chevron-right"></i></div>
-            </div>
-        </div>
-        <div class="loading">
-            Loading data and maps...
-        </div>
-        <div style="height:100%; width:100%;">
-            <div id="map" class="invisible"></div>
-        </div>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB24ptRAWnA0xYqcqV7KEf2LjRDxeOmNvI&callback=initMap&libraries=&v=weekly" async></script>
     </body>
 </html>
