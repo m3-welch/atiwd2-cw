@@ -1,15 +1,15 @@
 #! /bin/bash
 
-./resetfiles
+./extra_tools/resetfiles
 
 echo "Extracting 'air-quality-data-2004-2019.csv' into multiple CSVs"
-php extract-to-csv.php
+php task1/extract-to-csv.php
 
 echo "Normalising the split CSVs into multiple XML documents"
-php normalize-to-xml.php
+php task2/normalize-to-xml.php
 
 echo "Count the lines in each document"
-php count_lines.php
+php extra_tools/count_lines.php
 
 echo "Validate each XML document against the XSD Schema"
-php validate_xml_xsd.php
+php extra_tools/validate_xml_xsd.php

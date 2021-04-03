@@ -49,24 +49,75 @@ for that use case.
 
 # Links
 
-### Code
 [GitHub](https://github.com/m3-welch/atiwd2-cw)
 
-[Task 1](https://github.com/m3-welch/atiwd2-cw/tree/master/task1)
+[README.md (including usage instructions)](https://github.com/m3-welch/atiwd2-cw/blob/master/README.md)
 
-[Task 2](https://github.com/m3-welch/atiwd2-cw/tree/master/task2)
+---
+## [Task 1](https://github.com/m3-welch/atiwd2-cw/tree/master/task1)
+---
+[extract-to-csv.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task1/extract-to-csv.php)
 
-[Task 3](https://github.com/m3-welch/atiwd2-cw/tree/master/task3)
+---
+## [Task 2](https://github.com/m3-welch/atiwd2-cw/tree/master/task2)
+---
+[normalize-to-xml.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task2/normalize-to-xml.php)
 
-[Task 4](https://github.com/m3-welch/atiwd2-cw/tree/master/task4)
+[air-quality.xsd](https://github.com/m3-welch/atiwd2-cw/blob/master/task2/air-quality.xsd)
 
-### Report
-[Task 5](https://github.com/m3-welch/atiwd2-cw/tree/master/task5)
+---
+## [Task 3](https://github.com/m3-welch/atiwd2-cw/tree/master/task3)
+---
+[README.md](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/README.md)
 
-### Data CSV File
+[index.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/index.php)
+
+[stylesheet.css](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/stylesheet.css)
+
+[certainTimeOfDayData.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/certainTimeOfDayData.php)
+
+[allLevels6Stations.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/allLevels6Stations.php)
+
+[sites_list.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/sites_list.php)
+
+---
+## [Task 4](https://github.com/m3-welch/atiwd2-cw/tree/master/task4)
+---
+[README.md](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/README.md)
+
+[index.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/index.php)
+
+[stylesheet.css](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/stylesheet.css)
+
+[getData.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/getData.php)
+
+[googleMapsKey.example.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/googleMapsKey.example.php)
+
+[sites_list.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/sites_list.php)
+
+---
+## [Task 5](https://github.com/m3-welch/atiwd2-cw/tree/master/task5)
+---
+[REPORT.md](https://github.com/m3-welch/atiwd2-cw/blob/master/task5/REPORT.md)
+
+---
+## Data CSV File
 [air-quality-data-2004-2019.zip](https://fetstudy.uwe.ac.uk/~p-chatterjee/2020-21/modules/atwd2/assignment/air-quality-data-2004-2019.zip)
 
+---
+## Extra Tools Created (Not required)
+---
+[extra_tools](https://github.com/m3-welch/atiwd2-cw/tree/master/extra_tools)
 
+[count_lines.php](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/count_lines.php)
+
+[accuraccy_benchmark.php](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/accuracy_benchmark.php)
+
+[validate_xml_xsd.php](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/validate_xml_xsd.php)
+
+[run](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/run)
+
+[resetfiles](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/resetfiles)
 # Further Visiualisation
 My current submission for Task 4 is a heatmap displayed over the Google Maps representation of Bristol. While I think that this visualisation is
 powerful as it is easy to read, the data being displayed is only the average data for each site for each month. I think that a more powerful
