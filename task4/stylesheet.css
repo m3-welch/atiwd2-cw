@@ -89,12 +89,46 @@ body {
     height: 100%;
 }
 
+@keyframes pulse {
+    0% {color: #A67BE0;}
+    50% {color: #EEE7F1;}
+    100% {color: #A67BE0;}
+}
+
 .loading {
     position: absolute;
     top: 450px;
     left: 830px;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
 }
 
 .invisible {
     display: none;
+}
+
+.submenu {
+    position: absolute;
+    left: 790px;
+    top: 50px;
+    background-color: #A67BE0;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    z-index: 5;
+    color: #EEE7F1;
+}
+
+.dropdown {
+    padding: 3px;
+    background-color: #EEE7F1;
+    color: #A67BE0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.submenu-item {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }

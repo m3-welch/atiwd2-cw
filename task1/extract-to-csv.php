@@ -25,7 +25,7 @@ while ($data = fgets($file)) {
     // Get the site id for the current line and create the file name
     // e.g. site 501 -> ./files/data_501.csv
     $siteID = explode(';', $data)[4];
-    $siteFile = './files/csv/data_' . $siteID . '.csv';
+    $siteFile = '../files/csv/data_' . $siteID . '.csv';
     
     // If the file doesn't exist for the current site, make it
     if (!file_exists($siteFile)) {
@@ -55,22 +55,22 @@ while ($data = fgets($file)) {
 
     // Push each element to the line in the correct order
     $line_to_write[] = $siteID;           // Site ID
-    $line_to_write[] = $ts;              // Unix Timestamp
-    $line_to_write[] = $read_in_line[1]; // NOx
-    $line_to_write[] = $read_in_line[2]; // NO2
-    $line_to_write[] = $read_in_line[3]; // NO
-    $line_to_write[] = $read_in_line[5]; // PM10
-    $line_to_write[] = $read_in_line[6]; // NVPM10
-    $line_to_write[] = $read_in_line[7]; // VPM10
-    $line_to_write[] = $read_in_line[8]; // NVPM2.5
-    $line_to_write[] = $read_in_line[9]; // PM2.5
+    $line_to_write[] = $ts;               // Unix Timestamp
+    $line_to_write[] = $read_in_line[1];  // NOx
+    $line_to_write[] = $read_in_line[2];  // NO2
+    $line_to_write[] = $read_in_line[3];  // NO
+    $line_to_write[] = $read_in_line[5];  // PM10
+    $line_to_write[] = $read_in_line[6];  // NVPM10
+    $line_to_write[] = $read_in_line[7];  // VPM10
+    $line_to_write[] = $read_in_line[8];  // NVPM2.5
+    $line_to_write[] = $read_in_line[9];  // PM2.5
     $line_to_write[] = $read_in_line[10]; // VPM2.5
     $line_to_write[] = $read_in_line[11]; // CO
     $line_to_write[] = $read_in_line[12]; // O3
     $line_to_write[] = $read_in_line[13]; // SO2
     $line_to_write[] = $read_in_line[17]; // Location
-    $line_to_write[] = $latitude; // Latitude
-    $line_to_write[] = $longitude; // Longitude
+    $line_to_write[] = $latitude;         // Latitude
+    $line_to_write[] = $longitude;        // Longitude
 
     // Open the file resource for the current site in append mode
     $file_site = fopen($siteFile, 'a');

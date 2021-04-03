@@ -1,5 +1,6 @@
 <?php
 
+// An array to map the site IDs to the site names
 $sites = [
     "188" => "AURN Bristol Centre",
     "203" => "Brislington Depot",
