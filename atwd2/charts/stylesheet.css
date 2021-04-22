@@ -1,0 +1,228 @@
+.top-menu-bar {
+    width: 100%;
+    height: 40px;
+    background-color: #495057;
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+    z-index: 99;
+}
+
+body {
+    margin: 0;
+    background-color: #E9ECEF;
+}
+
+.top-menu-bar-item {
+    float: left;
+    margin-right: 20px;
+}
+
+.top-menu-bar-title {
+    margin-left: 10px;
+    color: #E9ECEF;
+}
+
+.top-menu-bar-title,
+.top-menu-bar-button {
+    font-size: 25px;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.top-menu-bar-button:hover {
+    cursor: pointer !important;
+    background-color: #ADB5BD !important;
+}
+
+.top-menu-bar-button:active {
+    background-color: #E9ECEF !important;
+}
+
+.top-menu-bar-text {
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: auto;
+    color: #E9ECEF;
+}
+
+.me {
+    position: relative;
+    left: 175px;
+}
+
+.second-menu-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #ADB5BD;
+    z-index: -1;
+}
+
+.invisible {
+    display: none;
+}
+
+.second-menu-bar-item{
+    height: 50px;
+    float: left;
+}
+
+.second-menu-bar-item .button {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: -10px;
+}
+
+.second-menu-bar-item .button:hover {
+    cursor: pointer;
+    background-color: #6C757D;
+}
+
+.second-menu-bar-item input {
+    height: 48px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #6C757D;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+}
+
+.second-menu-bar-item label {
+    text-align: right;
+    height: 50px;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.third-menu-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #ADB5BD;
+    z-index: -1;
+}
+
+.third-menu-bar-item{
+    height: 50px;
+    float: left;
+}
+
+.third-menu-bar-item .button {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+}
+
+.third-menu-bar-item .button:hover {
+    cursor: pointer;
+    background-color: #6C757D;
+}
+
+.third-menu-bar-item input {
+    height: 48px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    font-size: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #6C757D;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+    width: 150px;
+}
+
+.third-menu-bar-item label {
+    text-align: right;
+    height: 50px;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+select {
+    height: 50px;
+    border-bottom: 2px solid #6C757D;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 150px;
+}
+
+.site-list {
+    float: right;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    height: 50px;
+    vertical-align: middle;
+    position: relative;
+    top: 15px;
+}
+
+.close {
+    margin-left: 5px;
+}
+
+.close:hover {
+    color: #ADB5BD;
+    cursor: pointer;
+}
+
+.site-list-item {
+    border-radius: 2px;
+    padding: 2px;
+    background-color: #6C757D;
+    float: left;
+    margin-right: 2px;
+}
+
+.site-list-item:hover {
+    cursor: pointer;
+    background-color: #E9ECEF;
+}
+
+.site-list-item:active {
+    background-color: #495057;
+}

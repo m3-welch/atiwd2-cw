@@ -49,6 +49,8 @@ for that use case.
 
 # Links
 
+## NOTE: Submitted zip folder is in a different format/filestructure and the file paths in the code reflect that
+
 [GitHub](https://github.com/m3-welch/atiwd2-cw)
 
 [README.md (including usage instructions)](https://github.com/m3-welch/atiwd2-cw/blob/master/README.md)
@@ -58,10 +60,14 @@ for that use case.
 ---
 [extract-to-csv.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task1/extract-to-csv.php)
 
+[extract-to-csv.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task1/extract-to-csv.phps)
+
 ---
 ## [Task 2](https://github.com/m3-welch/atiwd2-cw/tree/master/task2)
 ---
 [normalize-to-xml.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task2/normalize-to-xml.php)
+
+[normalize-to-xml.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task2/normalize-to-xml.phps)
 
 [air-quality.xsd](https://github.com/m3-welch/atiwd2-cw/blob/master/task2/air-quality.xsd)
 
@@ -72,13 +78,21 @@ for that use case.
 
 [index.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/index.php)
 
+[index.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/index.phps)
+
 [stylesheet.css](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/stylesheet.css)
 
 [certainTimeOfDayData.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/certainTimeOfDayData.php)
 
+[certainTimeOfDayData.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/certainTimeOfDayData.phps)
+
 [allLevels6Stations.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/allLevels6Stations.php)
 
+[allLevels6Stations.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/allLevels6Stations.phps)
+
 [sites_list.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/sites_list.php)
+
+[sites_list.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task3/sites_list.phps)
 
 ---
 ## [Task 4](https://github.com/m3-welch/atiwd2-cw/tree/master/task4)
@@ -87,13 +101,21 @@ for that use case.
 
 [index.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/index.php)
 
+[index.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/index.phps)
+
 [stylesheet.css](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/stylesheet.css)
 
 [getData.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/getData.php)
 
+[getData.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/getData.phps)
+
 [googleMapsKey.example.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/googleMapsKey.example.php)
 
+[googleMapsKey.example.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/googleMapsKey.example.phps)
+
 [sites_list.php](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/sites_list.php)
+
+[sites_list.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/task4/sites_list.phps)
 
 ---
 ## [Task 5](https://github.com/m3-welch/atiwd2-cw/tree/master/task5)
@@ -111,13 +133,20 @@ for that use case.
 
 [count_lines.php](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/count_lines.php)
 
+[count_lines.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/count_lines.phps)
+
 [accuraccy_benchmark.php](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/accuracy_benchmark.php)
 
+[accuraccy_benchmark.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/accuracy_benchmark.phps)
+
 [validate_xml_xsd.php](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/validate_xml_xsd.php)
+
+[validate_xml_xsd.phps](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/validate_xml_xsd.phps)
 
 [run](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/run)
 
 [resetfiles](https://github.com/m3-welch/atiwd2-cw/blob/master/extra_tools/resetfiles)
+
 # Further Visiualisation
 My current submission for Task 4 is a heatmap displayed over the Google Maps representation of Bristol. While I think that this visualisation is
 powerful as it is easy to read, the data being displayed is only the average data for each site for each month. I think that a more powerful
